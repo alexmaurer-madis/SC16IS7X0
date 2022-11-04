@@ -1,0 +1,26 @@
+{
+  "name": "SC16IS7X0",
+  "version": "1.0.0",
+  "keywords": "UART GPIO SC16IS740 SC16IS750 SC16IS760",
+  "description": "Library to read and write UART and GPIO for the SC16IS740_750_760",
+  "authors": {
+    "name": "Alexandre Maurer",
+    "url": "https://github.com/alexmaurer-madis",
+    "maintainer": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexmaurer-madis/SC16IS7X0"
+  },
+  "homepage": "https://github.com/alexmaurer-madis/SC16IS7X0",
+  "export": {
+    "exclude": []
+  },
+  "dependencies": {
+    "adafruit/Adafruit BusIO": "^1.14.1"
+  },
+  "license": "MIT",
+  "frameworks": "arduino",
+  "platforms": "espressif8266",
+  "headers": ["SC16IS7X0.h"]
+}
