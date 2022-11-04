@@ -1,46 +1,61 @@
+# Add an additional hardware UART to your Arduino project.
 
-This directory is intended for project specific (private) libraries.
-PlatformIO will compile them to static libraries and link into executable file.
 
-The source code of each library should be placed in a an own separate directory
-("lib/your_library_name/[here are source files]").
+**THIS README IS NOT YET FINISHED**
 
-For example, see a structure of the following two libraries `Foo` and `Bar`:
+Library still in development.  
+Some examples will be soon published.
 
-|--lib
-|  |
-|  |--Bar
-|  |  |--docs
-|  |  |--examples
-|  |  |--src
-|  |     |- Bar.c
-|  |     |- Bar.h
-|  |  |- library.json (optional, custom build options, etc) https://docs.platformio.org/page/librarymanager/config.html
-|  |
-|  |--Foo
-|  |  |- Foo.c
-|  |  |- Foo.h
-|  |
-|  |- README --> THIS FILE
-|
-|- platformio.ini
-|--src
-   |- main.c
+# Compatibility and dependencies
+- SC16IS740_750_760 Library (MIT License)
+- Written for Arduino Framework.
+- Work on platform esp8266
+- Depends on [Adafruit_BusIO Library](https://github.com/adafruit/Adafruit_BusIO) (MIT License)
 
-and a contents of `src/main.c`:
+# Programmed features
+- This library inherits from Stream class
+- SPI communication
+- 64 bytes FIFO (TX & RX)
+- Hardware CTS / RTS Flow Control
+- SC16IS750 and SC16IS760 provids you with 8 additional programmable I/O pins
+
+# Not programmed yet
+- I2C communication
+- Usage of IRQ pin
+- IrDA
+- RS485 RTS control and 9-bit mode / multidrop
+
+# Speed and timing
+- SPI max clock frequency :
+  - 4MHz for SC16IS750
+  - 15MHz for SC16IS760
+- Crystal oscillator :
+  - 24MHz max
+- External clock frequency :
+  - 48MHz max @ 2.5V
+  - 80MHz max @ 3.3V
+
+
+# Code snippets
+
+## Library initialization
+
 ```
-#include <Foo.h>
-#include <Bar.h>
+#include "SC16IS7X0.h"
 
-int main (void)
-{
-  ...
+#define SPI_CS_GPIO 2
+
+SC16IS7X0 sc16is750 = SC16IS7X0(1843200);
+
+void setup() {
+  Serial.begin(9600);
+
+  sc16is750.begin_SPI(SPI_CS_GPIO);
+  sc16is750.begin_UART(115200, SERIAL_8N1);
 }
 
+
+void loop() {
+}
 ```
 
-PlatformIO Library Dependency Finder will find automatically dependent
-libraries scanning project source files.
-
-More information about PlatformIO Library Dependency Finder
-- https://docs.platformio.org/page/librarymanager/ldf.html
