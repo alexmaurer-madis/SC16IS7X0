@@ -1,15 +1,21 @@
 # Add an additional hardware UART to your Arduino project.
 
+DEV BRANCH OF LIBRARY
 
-**THIS README IS NOT YET FINISHED**
+| Feature           | Tested ESP8266 | Tester ESP32 | Tester |
+| :---------------- | :------------- | :----------- | :----- |
+| I2C communication | -              | -            | -      |
 
-Library still in development.  
-Some examples will be soon published.
+
+# Contributors
+
+- dev branch was created and committed with the fork of asantiagod https://github.com/asantiagod/SC16IS7X0 
+
 
 # Compatibility and dependencies
 - SC16IS740_750_760 Library (MIT License)
 - Written for Arduino Framework.
-- Work on platform esp8266
+- Work on platform ESP8266 / ESP32
 - Depends on [Adafruit_BusIO Library](https://github.com/adafruit/Adafruit_BusIO) (MIT License)
 
 # Programmed features
@@ -20,7 +26,6 @@ Some examples will be soon published.
 - SC16IS750 and SC16IS760 provids you with 8 additional programmable I/O pins
 
 # Not programmed yet
-- I2C communication
 - Usage of IRQ pin
 - IrDA
 - RS485 RTS control and 9-bit mode / multidrop
