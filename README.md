@@ -2,14 +2,14 @@
 
 DEV BRANCH OF LIBRARY
 
-| Feature           | Tested ESP8266 | Tester ESP32 | Tester |
+| Feature           | Tested ESP8266 | Tested ESP32 | Tester |
 | :---------------- | :------------- | :----------- | :----- |
 | I2C communication | -              | -            | -      |
 
 
 # Contributors
 
-- dev branch was created and committed with the fork of asantiagod https://github.com/asantiagod/SC16IS7X0 
+- The dev branch was created and committed with the fork of asantiagod https://github.com/asantiagod/SC16IS7X0 
 
 
 # Compatibility and dependencies
@@ -39,28 +39,4 @@ DEV BRANCH OF LIBRARY
 - External clock frequency :
   - 48MHz max @ 2.5V
   - 80MHz max @ 3.3V
-
-
-# Code snippets
-
-## Library initialization
-
-```
-#include "SC16IS7X0.h"
-
-#define SPI_CS_GPIO 2
-
-SC16IS7X0 sc16is750 = SC16IS7X0(1843200);
-
-void setup() {
-  Serial.begin(9600);
-
-  sc16is750.begin_SPI(SPI_CS_GPIO);
-  sc16is750.begin_UART(115200, SERIAL_8N1);
-}
-
-
-void loop() {
-}
-```
 
