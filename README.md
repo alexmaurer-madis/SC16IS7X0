@@ -1,15 +1,14 @@
 # Add an additional hardware UART to your Arduino project.
 
-DEV BRANCH OF LIBRARY
-
-| Feature           | Tested ESP8266 | Tested ESP32 | Tester |
+| New feature       | Tested ESP8266 | Tested ESP32 | Tester |
 | :---------------- | :------------- | :----------- | :----- |
-| I2C communication | -              | -            | -      |
+| I2C communication | not tested     | not tested   | -      |
 
 
 # Contributors
 
 - The dev branch was created and committed with the fork of asantiagod https://github.com/asantiagod/SC16IS7X0 
+- The dev branch has been merged into master on the 2024-03-04
 
 
 # Compatibility and dependencies
